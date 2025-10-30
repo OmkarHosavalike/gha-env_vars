@@ -32,7 +32,7 @@ jobs:
       - name: Get output 
         run: |
           echo "MONGODB_USERNAME: ${{ env.MONGODB_USERNAME }}"
-  
+          echo "Testing env variable: ${{ env.TESTING_ENV_NAME }}"
   deploy:
     needs: test 
     runs-on: ubuntu-latest
