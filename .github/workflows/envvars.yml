@@ -38,7 +38,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Output information
+        env:
+          step_var: This is step variable
         run:  |
           echo "MONGODB_USERNAME: ${{ env.MONGODB_USERNAME }}"
           echo "MONGODB_DB_NAME: $MONGODB_DB_NAME"
+          echo "Step variable: ${{ env.step_var }}"
 
